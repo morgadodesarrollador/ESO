@@ -9,6 +9,7 @@ function inicio(){
     uno.addEventListener("click",() => {
         console.log("uno");
         display.innerText = display.innerText.concat("1");
+        console.log (result());
     });
     dos.addEventListener("click",() => {
         console.log("dos");
@@ -16,4 +17,8 @@ function inicio(){
     });
 
 
+}
+
+let result = () => {
+    return eval(display.innerText);
 }
