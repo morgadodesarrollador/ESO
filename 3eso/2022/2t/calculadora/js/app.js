@@ -6,6 +6,7 @@ function inicio(){
     let resultado;
 
     const display = document.querySelector("span#display");
+    const operdisplay = document.querySelector("span.operacion");
     const cero = document.querySelector("span#b0");
     const uno = document.querySelector("span#b1");
     const dos = document.querySelector("span#b2");
@@ -42,8 +43,9 @@ function inicio(){
     });
     bmas.addEventListener("click",() => {
         memoria = parseInt(display.innerText, 10);
-        display.innerText = "+";
+        display.innerText = memoria;
         operacion = '+';
+        operdisplay.innerText = memoria + '+';
     });
     bigual.addEventListener("click",() => {
         if (operacion == '+') {
