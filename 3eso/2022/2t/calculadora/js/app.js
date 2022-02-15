@@ -20,37 +20,43 @@ function inicio(){
     
     const mas = document.querySelector("span#bmas");
     const igual = document.querySelector("span#bigual");
-    
+    operdisplay.innerText = '';
     uno.addEventListener("click",() => {
         display.innerText = display.innerText.concat("1");
         display.innerText = parseInt(display.innerText, 10);
+        operdisplay.innerText = operdisplay.innerText + '1';
     });
     dos.addEventListener("click",() => {
         display.innerText = display.innerText.concat("2");
         display.innerText = parseInt(display.innerText, 10);
+        operdisplay.innerText = operdisplay.innerText + '2';
     });
     tres.addEventListener("click",() => {
         display.innerText = display.innerText.concat("3");
         display.innerText = parseInt(display.innerText, 10);
+        operdisplay.innerText = operdisplay.innerText + '3';
     });
     cuatro.addEventListener("click",() => {
         display.innerText = display.innerText.concat("4");
         display.innerText = parseInt(display.innerText, 10);
+        operdisplay.innerText = operdisplay.innerText + '4';
     });
     cinco.addEventListener("click",() => {
         display.innerText = display.innerText.concat("5");
         display.innerText = parseInt(display.innerText, 10);
+        operdisplay.innerText = operdisplay.innerText + '5';
     });
     bmas.addEventListener("click",() => {
         memoria = parseInt(display.innerText, 10);
-        display.innerText = memoria;
         operacion = '+';
-        operdisplay.innerText = memoria + '+';
+        operdisplay.innerText = operdisplay.innerText + '+';
+        display.innerText = '';
     });
     bigual.addEventListener("click",() => {
         if (operacion == '+') {
             resultado = parseInt(display.innerText, 10) + memoria;
             display.innerText = resultado;
+            operdisplay.innerText = operdisplay.innerText + '=' + resultado;
         }
         
     });

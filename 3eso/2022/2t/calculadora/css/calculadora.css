@@ -49,6 +49,7 @@ div.display {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-end;
+    min-height: 100px;
 }
 div.display span.operacion {
     background-color: rgba(255,255,255,.2);
